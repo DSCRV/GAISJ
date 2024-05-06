@@ -63,7 +63,6 @@ th {
     color: black;
 }
 
-
 .navbar {
     display: flex;
     align-items: center;
@@ -74,4 +73,23 @@ th {
 .logo img {
     height: 75px; /* Adjust the height to make the logo smaller */
     margin-right: 20px;
+}
+
+/* Media queries for mobile devices */
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    .search-bar {
+        width: 80%;
+    }
+
+    .logo img {
+        height: 50px;
+    }
 }

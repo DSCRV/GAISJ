@@ -10,12 +10,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
             for (let i = 1; i < rows.length; i++) {
                 const rowData = rows[i].split(',');
-                console.log(rowData.length)
                 if (rowData.length === 9) {
-                    console.log(rowData)
                     const [nameWithQuotes, email, profile, status, prompt_design, gemini_and_streamlit, genAIGames, allPathways, redemptionStatus] = rowData;
                     if (status !== 'All Good') continue; // Skip if the student is not enrolled
-                    console.log(nameWithQuotes, email, profile, status, parseInt(prompt_design), gemini_and_streamlit, genAIGames, allPathways, redemptionStatus)
                     // Remove double quotes from the name
                     const name = nameWithQuotes.replace(/"/g, '');
 

@@ -76,20 +76,34 @@ th {
 }
 
 /* Media queries for mobile devices */
-@media only screen and (max-width: 600px) {
+@media (max-width: 800px) {
+    /* Styles for mobile devices */
     body {
         font-size: 14px;
     }
-
-    table {
-        width: 100%;
+    .navbar {
+        display: flex;
+        justify-content: center;
+    }
+    .logo {
+        margin: 10px;
     }
 
+    h1 {
+        font-size: 24px;
+    }
     .search-bar {
-        width: 80%;
+        flex-grow: 1;
+        display: flex; /* Use flexbox to center-align the search box */
+        justify-content: center; /* Center-align horizontally */
+        align-items: center; /* Center-align vertically */
+        position: relative;
+        width: 40%; /* Set the width to 50% */
+        margin: 0 auto; /* Center-align the entire search bar */
+        background-color: transparent; /* Remove background color */
+        border: 1px solid gray; /* Add a black outline */
     }
-
-    .logo img {
-        height: 50px;
+    table {
+        font-size: 12px;
     }
 }

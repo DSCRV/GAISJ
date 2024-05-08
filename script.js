@@ -18,12 +18,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
                     // Convert redemption status to lowercase and remove whitespace
                     const cleanedRedemptionStatus = redemptionStatus.toLowerCase().replace(/\s/g, '');
+                    if (cleanedRedemptionStatus === 'yes') {
+                        val = 1;
+                    }
+                    else{
+                        val = 0;
+                    }
 
                     const cleanedAllPathways = allPathways.toLowerCase().replace(/\s/g, '');
 
                     // Calculate rank based on the number of courses completed
                     leaderboardData.push({
-                        rank: parseInt(prompt_design) + parseInt(gemini_and_streamlit) + parseInt(genAIGames),
+                        rank: parseInt(prompt_design) + parseInt(gemini_and_streamlit) + parseInt(genAIGames) + val,
                         name,
                         prompt_design: parseInt(prompt_design),
                         gemini_and_streamlit: parseInt(gemini_and_streamlit),

@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    fetch('data/GenAI_May10.csv')
+    fetch('data/GenAI_May11.csv')
         .then(response => response.text())
         .then(data => {
             const rows = data.split('\n');
